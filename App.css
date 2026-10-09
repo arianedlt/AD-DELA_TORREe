@@ -1,0 +1,653 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #f8f5ff;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+
+/* LOGIN */
+
+.ngilo-user {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background:
+    radial-gradient(circle at 15% 20%, #ffd6f6 0%, transparent 30%),
+    radial-gradient(circle at 85% 15%, #dcd6ff 0%, transparent 30%),
+    radial-gradient(circle at 50% 100%, #ccefff 0%, transparent 35%),
+    linear-gradient(135deg, #f8f5ff, #eeeaff);
+}
+
+.user-login {
+  width: 100%;
+  max-width: 400px;
+
+  padding: 40px 35px;
+
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  box-shadow: 0 20px 50px rgba(80, 50, 120, 0.18);
+
+  text-align: center;
+}
+
+.user-login h2 {
+  margin: 0 0 25px;
+
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.user-login label {
+  display: block;
+
+  margin: 15px 0 7px;
+
+  text-align: left;
+
+  color: #333;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.user-login input {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #fafafa;
+
+  font-size: 14px;
+}
+
+.user-login input:focus {
+  border-color: #8b5cf6;
+
+  background: white;
+
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.user-login button {
+  width: 100%;
+
+  margin-top: 25px;
+  padding: 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.user-login button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+.user-login a {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  color: #8b5cf6;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+.user-login a:hover {
+  text-decoration: underline;
+}
+
+
+/* HOME */
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at 15% 20%, #ffd6f6 0%, transparent 30%),
+    radial-gradient(circle at 85% 15%, #dcd6ff 0%, transparent 30%),
+    radial-gradient(circle at 50% 100%, #ccefff 0%, transparent 35%),
+    linear-gradient(135deg, #f8f5ff, #eeeaff);
+}
+
+.home-header {
+  width: 100%;
+
+  padding: 20px 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.app-logo {
+  font-size: 22px;
+  font-weight: 800;
+
+  color: #222;
+}
+
+.app-logo span {
+  color: #8b5cf6;
+}
+
+.profile-btn,
+.logout-btn {
+  padding: 9px 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: white;
+  color: #333;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(80, 50, 120, 0.1);
+}
+
+.profile-btn:hover,
+.logout-btn:hover {
+  background: #f2ecff;
+}
+
+
+/* HOME CONTENT */
+
+.home-content {
+  width: 100%;
+  max-width: 700px;
+
+  margin: 45px auto 0;
+
+  padding: 20px;
+}
+
+.welcome-section {
+  text-align: center;
+}
+
+.logo-circle {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+
+  color: white;
+
+  font-size: 24px;
+}
+
+.welcome-section h1 {
+  margin: 0;
+
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.welcome-section h1 span {
+  color: #8b5cf6;
+}
+
+.welcome-section p {
+  margin: 10px 0;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+
+/* GENERATE / INBOX */
+
+.action-container {
+  width: 100%;
+
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+.action-card {
+  flex: 1;
+
+  min-height: 130px;
+
+  padding: 20px;
+
+  position: relative;
+
+  border: 1px solid #eee;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  box-shadow: 0 10px 30px rgba(80, 50, 120, 0.1);
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.action-card:hover {
+  transform: translateY(-3px);
+
+  background: white;
+
+  box-shadow: 0 15px 35px rgba(80, 50, 120, 0.15);
+}
+
+.action-card.anonymous {
+  border: 2px solid #ddc7ff;
+}
+
+.action-icon {
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #eee5ff;
+
+  font-size: 20px;
+}
+
+.action-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.action-text strong {
+  font-size: 14px;
+}
+
+.action-text small {
+  color: #888;
+
+  font-size: 11px;
+}
+
+.arrow {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  color: #9b6cff;
+
+  font-size: 22px;
+}
+
+
+/* RESULT SA BABA NG CARDS */
+
+.component-container {
+  width: 100%;
+
+  margin-top: 25px;
+
+  padding: 25px;
+
+  position: relative;
+
+  border-radius: 22px;
+
+  background: white;
+
+  box-shadow: 0 15px 40px rgba(80, 50, 120, 0.12);
+}
+
+.close-component {
+  width: 30px;
+  height: 30px;
+
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f2ecff;
+  color: #7448c7;
+
+  cursor: pointer;
+}
+
+
+/* MESSAGE CARD */
+
+.ngilo-message-card {
+  width: 100%;
+  max-width: 520px;
+
+  margin: 0 auto;
+
+  padding: 30px;
+
+  border-radius: 22px;
+
+  background: white;
+
+  box-shadow: 0 15px 40px rgba(80, 50, 120, 0.12);
+}
+
+.ngilo-message-card h1,
+.ngilo-message-card h2 {
+  margin: 0 0 18px;
+
+  text-align: center;
+}
+
+.ngilo-message-card label {
+  display: block;
+
+  margin: 15px 0 7px;
+
+  color: #444;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ngilo-message-card input,
+.ngilo-message-card textarea {
+  width: 100%;
+
+  padding: 13px;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #fafafa;
+
+  font-size: 14px;
+}
+
+.ngilo-message-card textarea {
+  min-height: 140px;
+
+  resize: vertical;
+}
+
+.ngilo-message-card input:focus,
+.ngilo-message-card textarea:focus {
+  border-color: #9b6cff;
+
+  background: white;
+
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.ngilo-message-card button {
+  width: 100%;
+
+  margin-top: 18px;
+
+  padding: 13px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* ANONYMOUS MESSAGE */
+
+.anonymous-message-form {
+  width: 100%;
+  max-width: 500px;
+
+  margin: 0 auto;
+}
+
+.anonymous-message-form h2 {
+  margin: 0 0 5px;
+}
+
+.anonymous-message-form p {
+  color: #888;
+
+  font-size: 13px;
+}
+
+.anonymous-message-form input,
+.anonymous-message-form textarea {
+  width: 100%;
+
+  margin-bottom: 10px;
+
+  padding: 12px;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #fafafa;
+
+  font-size: 14px;
+}
+
+.anonymous-message-form textarea {
+  min-height: 100px;
+
+  resize: vertical;
+}
+
+.anonymous-message-form button {
+  width: 100%;
+
+  padding: 13px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.character-count,
+.char-count {
+  text-align: right;
+
+  color: #999;
+
+  font-size: 11px;
+}
+
+
+/* ERROR */
+
+.login-error {
+  margin-bottom: 12px;
+
+  padding: 10px;
+
+  border-radius: 8px;
+
+  background: #fff0f3;
+
+  color: #d94668;
+
+  text-align: center;
+
+  font-size: 12px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .home-header {
+    padding: 15px;
+  }
+
+  .app-logo {
+    font-size: 18px;
+  }
+
+  .profile-btn,
+  .logout-btn {
+    padding: 8px 10px;
+
+    font-size: 11px;
+  }
+
+  .home-content {
+    margin-top: 30px;
+
+    padding: 15px;
+  }
+
+  .welcome-section h1 {
+    font-size: 28px;
+  }
+
+  .action-container {
+    flex-direction: column;
+  }
+
+  .action-card {
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+  }
+
+  .action-icon {
+    margin: 0;
+
+    flex-shrink: 0;
+  }
+
+  .action-text {
+    flex: 1;
+  }
+
+  .component-container {
+    margin-top: 20px;
+
+    padding: 20px 15px;
+  }
+
+  .ngilo-message-card {
+    padding: 25px 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .home-header {
+    padding: 12px;
+  }
+
+  .app-logo {
+    font-size: 16px;
+  }
+
+  .welcome-section h1 {
+    font-size: 25px;
+  }
+
+  .action-card {
+    padding: 15px;
+  }
+
+  .user-login {
+    padding: 25px 20px;
+  }
+}
